@@ -26,7 +26,11 @@ function allCombinations(str) {
 //Question 3
 function allCaps(str) {
   // your code here
-  
+  let words = str.toLowerCase().split(' ');
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1);
+  }
+  str = words.join(' ');
   return str;
 }
 
@@ -44,6 +48,7 @@ function myPower(x, n) {
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
+
   return "";
 }
 
@@ -55,7 +60,7 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-console.log(myPower(2, 9));
+console.log(allCaps("my mane is maayan"));
 // *** End of Playground ***
 
 // Don't touch me :)
