@@ -48,8 +48,15 @@ function myPower(x, n) {
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-
-  return "";
+  for (let i = 0; i < str.length; i++) 
+  {
+    let char = str[i];
+    if (str.indexOf(char) === i && str.indexOf(char, i + 1) === -1) 
+    {
+      return char;
+    }
+  }
+  return "_";
 }
 
 //Question 6 (Bonus)
@@ -60,7 +67,7 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-console.log(allCaps("my mane is maayan"));
+console.log(getFirstNotRepeating("my mane is maayan"));
 // *** End of Playground ***
 
 // Don't touch me :)
@@ -70,3 +77,4 @@ exports.allCaps = allCaps;
 exports.myPower = myPower;
 exports.getFirstNotRepeating = getFirstNotRepeating;
 exports.isPrefectNumber = isPrefectNumber;
+
