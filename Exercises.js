@@ -1,15 +1,14 @@
 //Question 1
 function myReverse(str) {
   // your code here
-  return "";
+  let revStr = str.split("").reverse().join("");
+  return revStr;
 }
 
 //Question 2
 function allCombinations(str) {
   let combinations = [];
   // your code here
-
-  //
   return combinations;
 }
 
@@ -49,3 +48,4 @@ exports.allCaps = allCaps;
 exports.myPower = myPower;
 exports.getFirstNotRepeating = getFirstNotRepeating;
 exports.isPrefectNumber = isPrefectNumber;
+
