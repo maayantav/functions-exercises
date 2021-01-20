@@ -9,13 +9,23 @@ function myReverse(str) {
 function allCombinations(str) {
   let combinations = [];
   // your code here
+  let newStr = "";
+  let i, j;
+  for (i = 0; i < str.length; i++)
+  {
+    for (j = i; j < str.length; j++)
+    {
+      newStr += str[j];
+      combinations.push(newStr);
+    }
+    newStr = "";
+  }
   return combinations;
 }
 
 //Question 3
 function allCaps(str) {
   // your code here
-  return "";
 }
 
 //Question 4
@@ -38,7 +48,7 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-
+console.log(allCombinations("maayan"));
 // *** End of Playground ***
 
 // Don't touch me :)
@@ -48,4 +58,3 @@ exports.allCaps = allCaps;
 exports.myPower = myPower;
 exports.getFirstNotRepeating = getFirstNotRepeating;
 exports.isPrefectNumber = isPrefectNumber;
-
